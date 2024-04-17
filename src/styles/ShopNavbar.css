@@ -1,0 +1,37 @@
+/* ShopNavbar.css */
+.nav-link-custom {
+    color: #151515;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-link-custom:hover {
+    color: #007bff;
+  }
+  
+  .ClearButton {
+    margin-left: 10px;
+  }
+  
+.nav{background-color: #08c761;}
+
+  /* ShopNavbar.css */
+.nav .nav-link {
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    font-size: 16px; /* Increase the font size for better visibility */
+    padding: 8px 12px; /* Add padding for spacing between links */
+    border: 1px solid rgb(22, 92, 57); /* Add a 1px solid light blue border around each nav link */
+  }
+  
+  .mb-3:hover {
+    color: #007bff;
+  }
+  
+  .navbar-custom {
+    min-height: 0px; /* Increase the min-height as desired */
+  }
+  
+
+  

@@ -1,0 +1,106 @@
+/* Shop.css */
+
+/* Style for the container */
+.Container {
+    padding: 15px;
+  }
+  
+  /* Style for the search input and button container */
+  .SearchContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the search input */
+  .SearchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Style for the clear button */
+  
+  .ClearButton {
+    background-color: #13d142;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for product cards */
+  .Card {
+    width: 25rem;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .Card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for product images */
+  .Card .CardImg {
+    height: 280px;
+    object-fit: cover;
+  }
+  
+  /* Style for product titles */
+  .Card h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for product descriptions */
+  .Card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for product prices */
+  .Card strong {
+    font-size: 20px;
+    font-weight: 900;
+    color: #043a1c;
+  }
+  
+  /* Style for the "Add to cart" button */
+  .Card .AddToCartButton {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  /* Style for product variations (Type and Size) */
+  .Card .ProductVariations {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Style for loading spinner container */
+  .LoadingContainer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+
+
+  

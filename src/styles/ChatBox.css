@@ -1,0 +1,147 @@
+/* ChatBox.css */
+
+.chat-box-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-input,
+  .contact-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .invalid {
+    border-color: #ff6347; /* Tomato color for invalid input */
+  }
+  
+  .error-message {
+    color: #ff6347;
+    margin: 5px 0;
+    font-size: 12px;
+  }
+  
+  .contact-message {
+    resize: vertical;
+  }
+  
+  .contact-button {
+    background-color: #03b34c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #02823a;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  /* Responsive styles for small devices (e.g., mobile phones) */
+  @media only screen and (max-width: 600px) {
+    .chat-box-container {
+      width: 80%;
+      border-radius: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .contact-input,
+    .contact-message {
+      width: 100%;
+    }
+  }
+  
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input,
+.contact-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.invalid {
+  border-color: #ff6347; /* Tomato color for invalid input */
+}
+
+.error-message {
+  color: #ff6347;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.contact-message {
+  resize: vertical;
+}
+
+.contact-button {
+  background-color: #03b34c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #02823a;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Add small spacing between boxes */
+.contact-input + .contact-input,
+.contact-message + .contact-message,
+.contact-button + .contact-button {
+  margin-top: 8px;
+}
+
+/* Responsive styles for small devices (e.g., mobile phones) */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,30 @@
+ion-icon {
+  visibility: hidden;
+  font-size: 30px;
+}
+.rounded-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.navbar {
+  background-color: rgb(16, 132, 55) !important;
+}
+
+.navbar .nav-link {
+  color: rgb(251, 246, 246);
+  font-size: 17px; /* You can adjust the font size value as per your requirement */
+  font-weight: bold;
+}
+
