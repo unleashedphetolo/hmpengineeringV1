@@ -129,16 +129,7 @@ const Home = () => {
         
          
       </div>
-      <p style={{ 
-        minHeight: '4rem', // Adjust based on the longest sentence
-        fontSize: '1rem', 
-        color: 'green', 
-        textAlign: 'center',
-        fontWeight:'bold',
-        marginBottom: '20px' // Space between text and buttons
-      }}>
-        {currentSentence}
-      </p>
+      <p className="auto-typing">{currentSentence}</p>
       <Container>
   <Row>
     <Col md={6}>
