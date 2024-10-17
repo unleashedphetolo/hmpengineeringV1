@@ -123,6 +123,7 @@
 .icon {
   margin-right: 8px;
   font-size: 18px;
+  display: flex;
 }
 
 /* Add small spacing between boxes */

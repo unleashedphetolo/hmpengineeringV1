@@ -51,6 +51,8 @@ const Login = () => {
 
             <Button
               className='mt-5'
+              style={{backgroundColor:'green',color:'white'}}
+              background-color='green'
               variant='primary'
               type='submit'
               disabled={loading}
@@ -59,7 +61,7 @@ const Login = () => {
             </Button>
           </Form>
           <div className='text-center'>
-            <Link to='/register'>Don't have an account? register</Link>
+            <Link to='/register' style={{color:'green',textDecoration:'none'}}>Don't have an account? register</Link>
           </div>
         </Card.Body>
       </Card>

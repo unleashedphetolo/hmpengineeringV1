@@ -63,7 +63,7 @@ const ChatBox = () => {
   className="open-chat-button"
   onClick={toggleChatBox}
   style={{
-    marginTop: '70px',
+    marginTop: '200px',
     padding: '10px 20px',
     borderRadius: '50px',
     border: 'none',

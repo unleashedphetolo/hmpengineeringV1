@@ -74,8 +74,9 @@ function App() {
             <Nav>
 
             <button
+       className='hmp-button'     
       style={{
-        marginTop: '12px',
+        marginTop: '10px',
         my: '2px',
         mx: '1px',
         display: 'block',
@@ -88,6 +89,7 @@ function App() {
         cursor: 'pointer',
         height: '40px', // Add height to the button
         width: '300px', // Add width to the button
+        marginRight:'40px',
       }}
     >
       HMP ENGINEERING SOLUTIONS

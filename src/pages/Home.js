@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Add import statement for useState
+import React, { useEffect, useState } from 'react';  // Add import statement for useState
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import image from '../assets/indexPic.jpg';
 import whoAreWe from '../assets/whoAreWe.jpg';
@@ -43,9 +43,57 @@ const TeamMember = ({ name, position, bio }) => {
 };
 
 const Home = () => {
-  
+
+  const sentences = [
+    'HMP Engineering Solutions offers solar-powered food dryers and food distribution technologies to enhance food security.',
+    'We develop sustainable solutions, combining mechanical, electrical, and software expertise for food preservation.',
+    'HMP Engineering Solutions provides energy-efficient products and services to improve food supply chain resilience.'
+  ];
+
+  const [currentSentence, setCurrentSentence] = useState('');
+  const [sentenceIndex, setSentenceIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  const images = [
+    '../assets/Engineering_team.jpg',
+    '../assets/Engineering_team2.jpg',
+    '../assets/Engineering_team3.jpg', // Add more image paths here
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
+
+  useEffect(() => {
+    const typingDelay = 100; // Delay in ms between each character
+    const sentenceDelay = 1000; // Delay before starting the next sentence after one finishes
+
+    // If there are more characters to type in the current sentence
+    if (charIndex < sentences[sentenceIndex].length) {
+      const timeout = setTimeout(() => {
+        setCurrentSentence((prev) => prev + sentences[sentenceIndex][charIndex]);
+        setCharIndex((prev) => prev + 1);
+      }, typingDelay);
+      return () => clearTimeout(timeout);
+    } else {
+      // Wait before starting the next sentence
+      const timeout = setTimeout(() => {
+        setCurrentSentence(''); // Clear the current sentence
+        setCharIndex(0); // Reset character index
+        setSentenceIndex((prev) => (prev + 1) % sentences.length); // Move to the next sentence or loop back
+      }, sentenceDelay);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, sentenceIndex, sentences]);
   return (
     <div style={{ minHeight: '75vh', position: 'relative' }}>
+      
       <div
         style={{
           background: `linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url(${image})`,
@@ -56,6 +104,7 @@ const Home = () => {
           width: '100%',
         }}
       >
+        
         <ChatBox />
         <a href="/shop">
           <Button
@@ -66,7 +115,7 @@ const Home = () => {
               color: 'white',
               width: '150px',
               height: '50px',
-              marginTop: '300px',
+              marginTop: '100px',
               marginLeft: '112px',
               fontSize: '20px',
               transition: 'transform 0.3s ease',
@@ -80,6 +129,16 @@ const Home = () => {
         
          
       </div>
+      <p style={{ 
+        minHeight: '4rem', // Adjust based on the longest sentence
+        fontSize: '1rem', 
+        color: 'green', 
+        textAlign: 'center',
+        fontWeight:'bold',
+        marginBottom: '20px' // Space between text and buttons
+      }}>
+        {currentSentence}
+      </p>
       <Container>
   <Row>
     <Col md={6}>

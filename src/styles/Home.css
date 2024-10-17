@@ -80,12 +80,44 @@
 
 /* Responsive styles for small devices */
 @media only screen and (max-width: 600px) {
+
+  
+  .navbar-collapse {
+    background-image: url('../assets/Engineering\ team.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
+    margin: 0 -12px -8px -12px;
+    position: relative;
+  }
+
+/* Dark overlay for text visibility */
+.navbar-collapse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+  z-index: 1; /* Ensure the overlay appears above the background image */
+}
+
+/* Navbar content styling */
+.navbar-collapse * {
+  position: relative;
+  z-index: 2; /* Ensure text and other elements appear above the overlay */
+}
+  
   .navbar-brand {
     font-size: 1.2rem;
   }
 
   .nav-link {
     font-size: 0.9rem;
+    padding-left: 32px;
   }
 
   .hero-image {
@@ -99,6 +131,10 @@
 
   .team-member-card {
     width: 100%;
+  }
+
+  .home-container{
+    min-height: '200vh';
   }
 }
 
