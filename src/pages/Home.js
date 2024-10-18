@@ -5,16 +5,16 @@ import whoAreWe from '../assets/whoAreWe.jpg';
 import mission from '../assets/mission.jpg';
 import vision from '../assets/vision.jpg';
 import Hilda2 from '../assets/Hilda2.jpg';
-import Sean from '../assets/Sean.jpg';
+// import Sean from '../assets/Sean.jpg';
 import Motebang from '../assets/Motebang.jpg';
 import Phetolo from '../assets/Phetolo.jpg';
-import Yolisa from '../assets/Yolisa.jpg';
-import Sfiso from '../assets/Sfiso.jpg';
+// import Yolisa from '../assets/Yolisa.jpg';
+// import Sfiso from '../assets/Sfiso.jpg';
 import water from '../assets/water.jpg'
 import desigh from '../assets/desigh.jpg'
 import Renewable_energy from '../assets/Renewable_energy.jpg'
 import '../styles/Home.css';
-import ChatBox from './ChatBox ';
+// import ChatBox from './ChatBox ';
 import TruncatedText from './TruncatedText';
 
  
@@ -54,21 +54,6 @@ const Home = () => {
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
-  const images = [
-    '../assets/Engineering_team.jpg',
-    '../assets/Engineering_team2.jpg',
-    '../assets/Engineering_team3.jpg', // Add more image paths here
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [images.length]);
 
   useEffect(() => {
     const typingDelay = 100; // Delay in ms between each character
@@ -105,7 +90,7 @@ const Home = () => {
         }}
       >
         
-        <ChatBox />
+        {/* <ChatBox /> */}
         <a href="/shop">
           <Button
             variant='primary'
@@ -115,7 +100,7 @@ const Home = () => {
               color: 'white',
               width: '150px',
               height: '50px',
-              marginTop: '100px',
+              marginTop: '340px',
               marginLeft: '112px',
               fontSize: '20px',
               transition: 'transform 0.3s ease',
@@ -287,7 +272,7 @@ const Home = () => {
           />
         </Row>
 
-        <Row className='my-4'>
+        {/* <Row className='my-4'>
           <TeamMember
     name="SEAN FORSYTHE"
     position="HEAD OF INSTALLATION & MAINTENANCE."
@@ -317,7 +302,7 @@ const Home = () => {
               `As a fervent marketer, Sifiso holds an advanced diploma in Marketing from Tshwane University of Technology (2020). His experience includes a year of in-service training at NHBRC, focusing on internal and external branding. Currently serving as a marketing intern at HMP Engineering Solutions, he formulates dynamic marketing strategies and action plans to drive organizational objectives. Sifiso is driven by a passion for learning, growth, and embracing new challenges inherent in the ever-evolving field of marketing, poised to contribute significantly to the continued success of HMP Engineering Solutions.`,
             }}
           />
-        </Row>
+        </Row> */}
 
        
       </Container>

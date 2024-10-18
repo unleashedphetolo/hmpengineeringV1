@@ -15,14 +15,65 @@ body {
   }
   /* Navbar */
   .navbar {
-    background-color: #333;
+    background-color: #040404;
     color: white;
   }
   
-  .navbar-brand img {
+  /* .navbar-brand img {
     margin-right: 10px;
-  }
+  } */
   
+/* Navbar brand styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1); /* Slight scaling effect on hover */
+  filter: drop-shadow(0px 4px 6px rgba(0, 255, 255, 0.7)); /* Glowing effect */
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+  border-radius: 50%; /* Adds rounded edges for a futuristic look */
+  border: 2px solid rgba(0, 255, 255, 0.3); /* Light neon border around the logo */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon glow effect around the logo */
+  transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition on hover */
+}
+
+.navbar-brand:hover img {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1); /* Stronger neon glow on hover */
+  border: 2px solid rgba(0, 255, 255, 0.8); /* Enhanced border on hover */
+}
+
+/* Optional: Futuristic animation */
+.navbar-brand img {
+  animation: pulse-glow 2s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  }
+}
+
+
+
+
+
+
+
   .nav-link {
     color: white;
     margin-right: 20px;
@@ -76,7 +127,7 @@ body {
   @media only screen and (max-width: 600px) {
 
     .nav-link:hover {
-      color: #19c235;
+      color: #0a9221;
     }
 
     .hmp-button{
@@ -85,4 +136,7 @@ body {
         margin-left: 50px;
     }
   }
+  
+
+
   

@@ -19,7 +19,8 @@ import { ToastContainer } from 'react-toastify'
 import PaymentSuccess from './pages/PaymentSuccess'
 import PaymentFailed from './pages/PaymentFailed'
 import Loading from './components/Loading'
-import Logo from './assets/logo2.png'
+import Logo from './assets/IconLogo.jpg'
+import xLogo from './assets/x.png';
 import '../src/styles/App.css';
 
 function App() {
@@ -74,26 +75,36 @@ function App() {
             <Nav>
 
             <button
-       className='hmp-button'     
-      style={{
-        marginTop: '10px',
-        my: '2px',
-        mx: '1px',
-        display: 'block',
-        fontWeight: 'bold',
-        backgroundColor: '#76ae36', // Set the background color to bright green
-        color: 'black', // Set the text color to black
-        padding: '10px 20px',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        height: '40px', // Add height to the button
-        width: '300px', // Add width to the button
-        marginRight:'40px',
-      }}
-    >
-      HMP ENGINEERING SOLUTIONS
-    </button>
+  className='hmp-button'
+  style={{
+    marginTop: '10px',
+    my: '2px',
+    mx: '1px',
+    display: 'block',
+    fontWeight: 'bold',
+    backgroundImage: 'linear-gradient(135deg, #76ae36, #4b8a23)', // Add gradient background
+    color: 'black', // Set text color to white for better contrast
+    padding: '12px 24px', // Increase padding for better look
+    border: '2px solid #4b8a23', // Add a border for sleekness
+    borderRadius: '8px', // Increase border-radius for a rounded look
+    cursor: 'pointer',
+    height: '50px', // Adjust height for better presence
+    width: '320px', // Adjust width for balance
+    marginRight: '40px',
+    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)', // Add a soft shadow for depth
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth hover transitions
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'scale(1.05)'; // Slight scale on hover
+    e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.3)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'scale(1)';
+    e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+  }}
+>
+  HMP ENGINEERING SOLUTIONS
+</button>
               <Link className='nav-link d-flex align-items-center' to='/cart'>
                 <ion-icon name='cart'></ion-icon>({cart.length})
               </Link>
@@ -163,16 +174,31 @@ function App() {
             </Col>
             <Col md={4}>
               <div className='d-flex align-items-center justify-content-center'>
-                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.linkedin.com/company/hmpengineering'>
+                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.linkedin.com/company/hmpengineering'
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
                   <ion-icon name='logo-linkedin'></ion-icon>
                 </a>
-                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.facebook.com/111023744597208'>
+                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.facebook.com/111023744597208'
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
                   <ion-icon name='logo-facebook'></ion-icon>
                 </a>
-                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.twitter.com/hmp_engineering'>
-                  <ion-icon name='logo-twitter'></ion-icon>
-                </a>
-                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.instagram.com/hmpengineering'>
+                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.x.com/hmp_engineering' aria-label="X Logo"
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+               <img 
+                src={xLogo} alt="X Logo"  style={{ width: '35px', height: '35px', marginBottom:'5px', borderRadius:'100px' }} />
+              </a>
+
+                <a style={{ color: 'white', margin: '0 5px' }} href='https://www.instagram.com/hmpengineering'
+                target="_blank" 
+                rel="noopener noreferrer"
+                >
+                  
                   <ion-icon name='logo-instagram'></ion-icon>
                 </a>
               </div>

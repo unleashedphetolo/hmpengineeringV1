@@ -59,6 +59,32 @@ const Header = ({ title, subTitle }) => {
           
         </div>
       </Container>
+
+      <style jsx>{`
+    @media only screen and (max-width: 600px) {
+    .h1 {
+      color: white;
+      font-weight: 700;
+      font-size: 3rem; // Adjust the font size as desired
+      font-family: 'Brush Script MT'; // Custom font type
+      text-transform: lowercase; // Convert the title to lowercase
+    }
+
+    .p {
+      color: green;
+      font-size: 1.0rem; // Adjust the font size as desired
+      font-family: Georgia, serif; // Custom font type
+    }
+
+    .header-title {
+      font-size: 1.5rem; // Adjusted font size for smaller screens
+    }
+
+    .header-subtitle {
+      font-size: 0.9rem; // Adjusted font size for smaller screens
+    }
+  }
+`}</style>
     </div>
   );
 };
